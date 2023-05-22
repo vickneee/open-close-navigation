@@ -3,8 +3,8 @@
 }
 
 body {
-    background: linear-gradient(217deg, #FFE5CA, rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, #FA9884, rgba(0,255,0,0) 70.71%);
+    background: linear-gradient(217deg, #FFE5CA, rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, #FA9884, rgba(0, 255, 0, 0) 70.71%);
     margin: 0;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
@@ -16,17 +16,17 @@ body {
 nav {
     background-color: #F1F6F9;
     padding: 20px;
-    width: 100px;
+    width: 80px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border-radius: 3px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     transition: width 0.6s linear;
 }
 
 nav.active {
-    width: 450px;
+    width: 410px;
 }
 
 nav ul {
@@ -76,16 +76,25 @@ nav ul a {
 
 .icon .line {
     background-color: #E74646;
-    height: 2px;
-    width: 20px;
+    height: 4px;
+    width: 24px;
     position: absolute;
     top: 10px;
     left: 5px;
+    transition: transform 0.6s linear;
 }
 
 .icon .line2 {
     top: auto;
     bottom: 10px;
+}
+
+nav.active .icon .line1 {
+    transform: rotate(45deg) translateY(5px);
+}
+
+nav.active .icon .line2 {
+    transform: rotate(-45deg) translateY(-5px);
 }
 
 
